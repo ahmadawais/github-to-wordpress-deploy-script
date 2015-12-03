@@ -22,13 +22,13 @@
 GITHUB_ACCESS_TOKEN="TOKEN"
 
 # The slug of your WordPress.org plugin
-PLUGIN_SLUG="your-slug-here"
+PLUGIN_SLUG="cf7-customizer"
 
 # GITHUB user who owns the repo
-GITHUB_REPO_OWNER="username"
+GITHUB_REPO_OWNER="WPTie"
 
 # GITHUB Repository name
-GITHUB_REPO_NAME="repo-name"
+GITHUB_REPO_NAME="CF7Customizer"
 
 # ----- STOP EDITING HERE -----
 
@@ -94,21 +94,20 @@ read -p "PRESS [ENTER] TO DEPLOY BRANCH "${BRANCH}
 
 # REMOVE UNWANTED FILES & FOLDERS
 echo "Removing unwanted files"
-rm -Rf .git
 rm -Rf tests
-rm -f .gitattributes
 rm -f .gitignore
+rm -f .travis.yml
+rm -f README.md
+rm -f phpunit.xml
+rm -Rf node_modules
+rm -Rf .git
+rm -f .gitattributes
 rm -f .gitmodules
 rm -f .editorconfig
-rm -f .travis.yml
-rm -f Gruntfile.js
-rm -f package.json
 rm -f .jscrsrc
 rm -f .jshintrc
 rm -f composer.json
-rm -f phpunit.xml
 rm -f phpunit.xml.dist
-rm -f README.md
 rm -Rf apigen
 
 # MOVE INTO SVN DIR
